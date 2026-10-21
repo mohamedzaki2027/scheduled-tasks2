@@ -1,10 +1,11 @@
 import requests
+import os
 
 
 class WeatherManager():
 
     OW_ENDPOINT_URL = 'https://api.openweathermap.org/data/2.5/forecast'
-    APP_ID = '8fc4096ef9c9e23174b8c8f7c0f24e3e'
+    APP_ID = os.environ.get('APP_ID')
 
     def __init__(self, lat, lng) -> None:
         self.lat = lat
